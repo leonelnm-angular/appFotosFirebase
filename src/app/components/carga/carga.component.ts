@@ -10,6 +10,7 @@ import { LoadImagesService } from 'src/app/providers/load-images.service';
 export class CargaComponent implements OnInit {
 
   archivos: FileItem[] = [];
+  isOverElement = false;
 
   constructor( public loadImagesService: LoadImagesService ) { }
 
@@ -19,5 +20,9 @@ export class CargaComponent implements OnInit {
 
   loadImages() {
     this.loadImagesService.loadImages( this.archivos );
+  }
+
+  cleanFiles() {
+    this.archivos = [];
   }
 }
