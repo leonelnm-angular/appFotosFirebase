@@ -1,0 +1,42 @@
+<div class="row">
+
+
+    <div class="col-md-5">
+        <h3>Seleccione archivos</h3>
+        <div class="well drop-zone">
+            <!-- <p>Arrastre aquí los archivos</p> -->
+            <img src="assets/img/dropHere.jpeg">
+        </div>
+    </div>
+
+    <div class="col-md-7">
+
+        <h3>Cargar archivos</h3>
+
+        <button (click)="loadImages()" [disabled]="archivos.length == 0" type="button" class="btn btn-success">Cargar a firebase</button> &nbsp;
+        <button type="button" class="btn btn-danger">Limpiar</button>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre del archivo</th>
+                    <th>Tamaño</th>
+                    <th>Progreso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>xyz</td>
+                    <td>123mb</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
